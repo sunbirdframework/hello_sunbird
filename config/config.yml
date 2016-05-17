@@ -1,0 +1,15 @@
+default: &default
+  name: hello_sunbird
+  database: postgres://postgres@192.168.99.100:5432/app?sslmode=disable
+  log: true
+  sunbird_info: true
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  sunbird_info: false
