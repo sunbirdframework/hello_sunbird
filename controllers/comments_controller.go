@@ -23,10 +23,12 @@ func (c CommentsController) Name() string {
 
 // Index ...
 func (c CommentsController) Index(ctx echo.Context) error {
-	return ctx.JSON(http.StatusOK, "Hello from CommentsController/Index")
+	c.Ctx = ctx
+	return c.Ctx.JSON(http.StatusOK, "Hello from CommentsController/Index")
 }
 
 // Custom ...
 func (c CommentsController) Custom(ctx echo.Context) error {
-	return ctx.JSON(http.StatusOK, "Hello from CommentsController/Custom")
+	c.Ctx = ctx
+	return c.Ctx.JSON(http.StatusOK, "Hello from CommentsController/Custom")
 }

@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	app.HelloSunbird.Run()
+	app.Fly()
 }
